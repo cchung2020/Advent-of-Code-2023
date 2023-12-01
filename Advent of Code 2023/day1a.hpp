@@ -19,7 +19,6 @@ void day1a() {
 				digits += c;
 			}
 		}
-		println("{}", digits);
 
 		string num;
 		num += digits[0];

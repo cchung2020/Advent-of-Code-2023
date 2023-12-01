@@ -40,45 +40,20 @@ void day1b() {
 }
 
 optional<char> starts_with_num(string_view str) {
-	string three_letters = str
-		| take(3)
-		| ranges::to<string>();
-	string four_letters = str
-		| take(4)
-		| ranges::to<string>();
-	string five_letters = str
-		| take(5)
-		| ranges::to<string>();
+	string three_letters = str | take(3) | ranges::to<string>();
+	string four_letters = str | take(4) | ranges::to<string>();
+	string five_letters = str | take(5) | ranges::to<string>();
 
 	set<string> letters = { three_letters, four_letters, five_letters };
 
-	if (letters.contains("one")) {
-		return { '1' };
-	}
-	else if (letters.contains("two")) {
-		return { '2' };
-	}
-	else if (letters.contains("three")) {
-		return { '3' };
-	}
-	else if (letters.contains("four")) {
-		return { '4' };
-	}
-	else if (letters.contains("five")) {
-		return { '5' };
-	}
-	else if (letters.contains("six")) {
-		return { '6' };
-	}
-	else if (letters.contains("seven")) {
-		return { '7' };
-	}
-	else if (letters.contains("eight")) {
-		return { '8' };
-	}
-	else if (letters.contains("nine")) {
-		return { '9' };
-	}
-
+	if (letters.contains("one"))        return { '1' };
+	else if (letters.contains("two"))   return { '2' };
+	else if (letters.contains("three")) return { '3' };
+	else if (letters.contains("four"))  return { '4' };
+	else if (letters.contains("five"))  return { '5' };
+	else if (letters.contains("six"))   return { '6' };
+	else if (letters.contains("seven")) return { '7' };
+	else if (letters.contains("eight")) return { '8' };
+	else if (letters.contains("nine"))  return { '9' };
 	return {};
 }
