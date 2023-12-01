@@ -1,4 +1,4 @@
-#include "day1a.hpp"
+#include "solutions.hpp"
 
 int main() {
 	day1a();

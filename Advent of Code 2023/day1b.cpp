@@ -1,5 +1,3 @@
-#pragma once
-
 #include <iostream>
 #include <print>
 #include <string>
@@ -20,7 +18,7 @@ void day1b() {
 	while (getline(cin, line)) {
 		string digits;
 
-		for (auto [i, c] : line | views::enumerate) {
+		for (auto [i, c] : line | enumerate) {
 			if (isdigit(c)) {
 				digits += c;
 			}

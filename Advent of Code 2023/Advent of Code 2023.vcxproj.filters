@@ -18,15 +18,20 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="day1a.hpp">
+    <ClCompile Include="day1a.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="day1b.hpp">
+    <ClCompile Include="day1b.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
     <Text Include="output.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="solutions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
