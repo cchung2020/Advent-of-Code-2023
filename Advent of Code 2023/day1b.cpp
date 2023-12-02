@@ -23,7 +23,7 @@ void day1b() {
 				digits += c;
 			}
 			else {
-				auto result = starts_with_num(string_view(line | drop(i)));
+				optional<char> result = starts_with_num(string_view(line | drop(i)));
 				if (result.has_value()) {
 					digits += result.value();
 				}
@@ -38,11 +38,11 @@ void day1b() {
 }
 
 optional<char> starts_with_num(string_view str) {
-	string three_letters = str | take(3) | ranges::to<string>();
-	string four_letters = str | take(4) | ranges::to<string>();
-	string five_letters = str | take(5) | ranges::to<string>();
+	string_view three_letters = str | take(3);
+	string_view four_letters = str | take(4);
+	string_view five_letters = str | take(5);
 
-	set<string> letters = { three_letters, four_letters, five_letters };
+	set<string_view> letters = { three_letters, four_letters, five_letters };
 
 	if (letters.contains("one"))        return { '1' };
 	else if (letters.contains("two"))   return { '2' };
