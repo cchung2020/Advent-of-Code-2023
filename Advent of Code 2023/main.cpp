@@ -7,7 +7,7 @@ using std::chrono::duration_cast, std::chrono::milliseconds;
 int main() {
 	// auto start = std::chrono::system_clock::now();
 
-	day2a();
+	day3b();
 
 	// auto end = std::chrono::system_clock::now();
 	// println("\n{} elapsed", duration_cast<milliseconds>(end - start));
