@@ -72,10 +72,6 @@ void day5a() {
 	println("{}", *ranges::min_element(locations));
 }
 
-//auto next =
-//records[{"seed", "soil"}].contains(seed) ?
-//records[{"seed", "soil"}][seed] : seed;
-
 long long int next_type(
 	map<pair<string, string>, 
 		vector<tuple<long long int, long long int, long long int>>>& records
