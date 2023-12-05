@@ -22,13 +22,11 @@ void day4a() {
 	while (cin >> w >> cardNum >> c) {
 		set<int> winners;
 		vector<int> numbers;
-		string line;
-
-		string str;
-		getline(cin, str);
+		string line, str;
+		getline(cin, line);
 
 		stringstream stream;
-		stream << str;
+		stream << line;
 
 		while (stream >> str && str != "|") {
 			winners.insert(stoi(str));

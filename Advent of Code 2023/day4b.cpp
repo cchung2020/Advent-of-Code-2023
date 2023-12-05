@@ -23,13 +23,11 @@ void day4b() {
 	while (cin >> w >> cardNum >> c) {
 		set<int> winners;
 		vector<int> numbers;
-		string line;
-
-		string str;
-		getline(cin, str);
+		string line, str;
+		getline(cin, line);
 
 		stringstream stream;
-		stream << str;
+		stream << line;
 
 		while (stream >> str && str != "|") {
 			winners.insert(stoi(str));
@@ -50,7 +48,6 @@ void day4b() {
 		for (int j = cardNum + 1; j <= cardNum + matches; j++) {
 			record[j] += record[cardNum];
 		}
-
 	}
 
 	for (auto [card, count] : record) {

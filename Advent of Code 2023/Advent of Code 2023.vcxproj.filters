@@ -42,6 +42,12 @@
     <ClCompile Include="day4b.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="day5a.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="day5b.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
