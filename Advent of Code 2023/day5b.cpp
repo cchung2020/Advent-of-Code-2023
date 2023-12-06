@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <print>
 #include <string>
@@ -90,3 +91,4 @@ long long int back_type(
 
 	return num;
 }
+*/
