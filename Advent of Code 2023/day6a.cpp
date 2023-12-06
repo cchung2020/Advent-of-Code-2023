@@ -2,12 +2,7 @@
 #include <print>
 #include <string>
 #include <vector>
-#include <map>
-#include <set>
-#include <algorithm>
-#include <numeric>
 #include <ranges>
-#include <sstream>
 
 using namespace std;
 using namespace views;
@@ -31,7 +26,7 @@ void day6a() {
         | views::transform([](auto s) { return stoi(s | ranges::to<string>()); })
         | ranges::to<vector<int>>();
 
-    vector<int> higher_scores;
+    int total = 1;
 
     for (auto [race, time] : times | enumerate) {
         int distance = distances[race];
@@ -43,12 +38,8 @@ void day6a() {
                 wins++;
             }
         }
-        higher_scores.push_back(wins);
-    }
 
-    int total = 1;
-    for (auto n : higher_scores) {
-        total *= n;
+        total *= wins;
     }
 
     println("{}", total);

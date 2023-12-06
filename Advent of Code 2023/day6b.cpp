@@ -2,12 +2,7 @@
 #include <print>
 #include <string>
 #include <vector>
-#include <map>
-#include <set>
-#include <algorithm>
-#include <numeric>
 #include <ranges>
-#include <sstream>
 
 using namespace std;
 using namespace views;
@@ -20,7 +15,7 @@ void day6b() {
     i64 time = stoll(line
         | split(' ')
         | drop(1)
-        | filter([](auto s) {return s.size() > 0; })
+        | filter([](auto s) { return s.size() > 0; })
         | join
         | ranges::to<string>());
 
@@ -28,11 +23,9 @@ void day6b() {
     i64 distance = stoll(line
         | split(' ')
         | drop(1)
-        | filter([](auto s) {return s.size() > 0; })
+        | filter([](auto s) { return s.size() > 0; })
         | join
         | ranges::to<string>());
-
-    vector<int> higher_scores;
 
     int lower = 0 , upper = time;
     
