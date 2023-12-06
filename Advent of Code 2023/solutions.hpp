@@ -15,3 +15,5 @@ void day4b();
 void day5a();
 void day5b();
 
+void day6a();
+void day6b();

@@ -12,15 +12,15 @@
 
 using namespace std;
 using namespace views;
+using i64 = long long int;
 
-long long int next_type(
-	map<pair<string, string>,
-	vector<tuple<long long int, long long int, long long int>>>& records
-	, pair<string, string> pairType, long long int num);
+i64 next_type(
+	map<pair<string, string>, vector<tuple<i64, i64, i64>>>& records
+	, pair<string, string> pairType
+	, i64 num);
 
 void day5a() {
-	map<pair<string, string>, vector<tuple<long long int, long long int, long long int>>> records;
-
+	map<pair<string, string>, vector<tuple<i64, i64, i64>>> records;
 	string line, word, destination,source;
 	char c;
 
@@ -72,10 +72,10 @@ void day5a() {
 	println("{}", *ranges::min_element(locations));
 }
 
-long long int next_type(
-	map<pair<string, string>, 
-		vector<tuple<long long int, long long int, long long int>>>& records
-	, pair<string, string> pairType, long long int num) {
+i64 next_type(
+	map<pair<string, string>, vector<tuple<i64, i64, i64>>>& records
+	, pair<string, string> pairType
+	, i64 num) {
 	for (auto [dest, source, size] : records[pairType]) {
 		if (num >= source && num < source + size) {
 			return dest + (num - source);
