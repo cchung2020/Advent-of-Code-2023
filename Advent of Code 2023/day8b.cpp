@@ -51,7 +51,7 @@ void day8b() {
 
 	i64 steps = 1;
 	for (auto n : starting) {
-		steps = abs(n) * abs(steps) / (gcd(n, steps));
+		steps = lcm(n, steps);
 	}
 
 	println("{}", steps);
