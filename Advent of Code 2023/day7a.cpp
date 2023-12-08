@@ -79,7 +79,7 @@ std::istream& operator>>(std::istream& in, PokerHand& pokerHand) {
 
 	bool one_pair = false;
 	for (auto card : pokerHand.hand) {
-		auto card_count = ranges::count_if(pokerHand.hand, [card](auto c) { return c == card; }) ;
+		auto card_count = ranges::count_if(pokerHand.hand, [card](auto c) { return c == card; });
 
 		if (card_count == 2) {
 			one_pair = true;
