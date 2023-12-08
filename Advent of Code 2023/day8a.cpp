@@ -3,16 +3,11 @@
 #include <string>
 #include <vector>
 #include <map>
-#include <set>
-#include <algorithm>
 #include <numeric>
 #include <ranges>
-#include <sstream>
-#include <optional>
 
 using namespace std;
 using namespace views;
-using ranges::to;
 
 void day8a() {
 	map<string, pair<string, string>> record;
