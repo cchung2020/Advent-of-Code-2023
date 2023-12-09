@@ -2,13 +2,8 @@
 #include <print>
 #include <string>
 #include <vector>
-#include <map>
-#include <set>
 #include <algorithm>
-#include <numeric>
 #include <ranges>
-#include <sstream>
-#include <optional>
 
 using namespace std;
 using namespace views;
@@ -22,7 +17,6 @@ void day9b() {
 	while (getline(cin, line)) {
 		vector<i64> nums = line
 			| split(' ')
-			| filter([](auto s) {return s.size() > 0; })
 			| views::transform([](auto s) {return stoll(s | to<string>()); })
 			| to<vector>();
 
