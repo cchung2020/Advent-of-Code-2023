@@ -42,7 +42,7 @@ void day9b() {
 
 
 		i64 newVal = 0;
-		for (auto [i, v] : gaps | views::reverse | enumerate) {
+		for (auto v : gaps | views::reverse) {
 			newVal = v.front() - newVal;
 		}
 
