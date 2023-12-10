@@ -26,3 +26,6 @@ void day8b();
 
 void day9a();
 void day9b();
+
+void day10a();
+void day10b();

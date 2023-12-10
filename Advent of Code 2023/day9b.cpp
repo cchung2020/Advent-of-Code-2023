@@ -17,7 +17,7 @@ void day9b() {
 	while (getline(cin, line)) {
 		vector<i64> nums = line
 			| split(' ')
-			| views::transform([](auto s) {return stoll(s | to<string>()); })
+			| views::transform([](auto s) { return stoll(s | to<string>()); })
 			| to<vector>();
 
 		vector<vector<int>> gaps = { {} };
@@ -27,7 +27,7 @@ void day9b() {
 
 		bool all_zeros = ranges::all_of(gaps.back(), [](auto n) {
 			return n == 0;
-			});
+		});
 
 		while (!all_zeros) {
 			gaps.push_back({});
