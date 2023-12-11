@@ -31,7 +31,6 @@ void day10a() {
 		grid.push_back(line);
 	}
 
-
 	int x, y;
 	for (auto [i, line] : grid | enumerate) {
 		for (auto [j, p] : line | enumerate) {
